@@ -1,0 +1,24 @@
+- If given more time:
+  - I would look into more efficient sorting. I dont love using a bubble sort as it is pretty slow.
+  - I think the heap would work. 
+    - There is a chance I could use just the heap  and have it be much closer to o(n) as well as save memory...
+ - Runtime complexity
+   - bubbleUp,addToSorted,requestHandled = O(n Log n)
+   - top100 = O(1)
+   - clear() could be O(n) or O(1) 
+     - depending on preferences for Node garbage collection
+ - How does your code work?
+   - This would be run on a Node Server, and could be attached to whatever takes incoming requests
+   - top100() could be called and sent to the frontend, depending on how they would like information displayed, or could be set to a timer and would print to the log every x minutes
+ - What other approaches?
+   - See my notes/ brainstorming on the top of ipTracker.js
+   - Linked List / Heap
+   - Ultimately I think heap would be better, as the more frequent requests wouldnt go so far down the pile
+ - How to test this?
+   - unit tests
+      - bubble sort works
+      - doesnt crash with bad info
+      -  breaks work at the right time
+   -  integration
+      -  send 10 requests through and check the counter/sorted array
+      

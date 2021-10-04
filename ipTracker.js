@@ -69,26 +69,3 @@ class IPTracker {
         return this.counter
     }
 }
-/**
- * - If given more time:
- *      Look into more efficient sorting. I dont love using a bubble sort as it is pretty slow.
- *      look into making the heap work. 
- *          There is a chance I could use just the heap and have it be much closer to o(n)
- * - Runtime complexity
- *      bubbleUp,addToSorted,requestHandled = O(n Log n)
- *      top100 = O(1)
- *      clear could be O(n) or O(1) depending on preferences for Node garbage collection
- * - How does your code work?
- *      This would be run on a Node Server, and could be attached to whatever takes incoming requests
- *      top100() could be called and sent to the frontend, depending on the 
- * - What other approaches?
- *      See notes/brainstorming on the top
- * - How to test this
- *      unit tests
- *          - bubble sort works
- *          - doesnt crash with bad info
- *          -  breaks work at the right time
- *      integration
- *          send 10 requests through and check the counter
- *          
- */
